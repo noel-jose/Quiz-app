@@ -1,6 +1,11 @@
 import React from "react";
+import { fetchQuizzes } from "../utils/index";
+import { useEffect } from "react";
 
 const Dashboard = () => {
+  useEffect(() => {
+    fetchQuizzes();
+  }, []);
   return (
     <div className="container mx-auto">
       <div>
@@ -15,9 +20,7 @@ const Dashboard = () => {
             New Quiz
           </button>
         </div>
-        <div className="flex flex-col">
-          
-        </div>
+        <div className="flex flex-col"></div>
       </main>
     </div>
   );
