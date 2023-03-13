@@ -2,53 +2,68 @@
   "quizzes": [
     {
       "id": 1,
-      "title": "QUIZ 1",
-      "desc": "description of quiz 1",
+      "title": "QUIZ 12",
+      "desc": "description of quiz 13",
       "questions": [
         {
-          "id": 1,
-          "question": "Who is the first prime minister of india",
-          "type": "MULTISELECT",
+          "questionId": 1678681259046,
+          "title": "Q2",
+          "type": "Multi Select",
           "options": [
-            { "option": "Javaharlal Nehru", "isCorrect": true },
-            { "option": "Indira Gandhi", "isCorrect": false }
+            {
+              "optionId": 1678681265991,
+              "optionValue": "01",
+              "isCorrect": false
+            }
           ]
         }
       ]
     },
     {
-      "id": 2,
-      "title": "QUIZ 2",
-      "desc": "description of quiz 2",
+      "id": 1678644983937,
+      "title": "Title",
+      "desc": "Desc",
       "questions": [
         {
-          "id": 1,
-          "question": "What is the national language of india",
-          "type": "SINGLE SELECT",
-          "options": [
-            { "option": "HINDI", "isCorrect": true },
-            { "option": "ENGLISH", "isCorrect": false },
-            { "option": "MALAYALAM", "isCorrect": false }
-          ]
-        },
-        {
-          "id": 2,
-          "question": "Which of the following are south indian states",
-          "type": "MULTISELECT",
+          "questionId": 1678681435633,
+          "title": "Q@",
+          "type": "Multi Select",
           "options": [
             {
-              "option": "ODISHA",
+              "optionId": 1678681442512,
+              "optionValue": "01",
               "isCorrect": false
             },
             {
-              "option": "Kerala",
+              "optionId": 1678681445271,
+              "optionValue": "02",
               "isCorrect": true
             },
             {
-              "option": "GOA",
-              "isCorrect": true
+              "optionId": 1678681447830,
+              "optionValue": "03",
+              "isCorrect": false
             }
           ]
+        },
+        {
+          "questionId": 1678681428500,
+          "title": "Q1",
+          "type": "Multi Select",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": 1678681741678,
+      "title": "Test Quiz",
+      "desc": "This is a test Quiz",
+      "questions": [
+        {
+          "questionId": 1678681729280,
+          "title": "Test Question ",
+          "type": "Multi Select",
+          "options": []
         }
       ]
     }

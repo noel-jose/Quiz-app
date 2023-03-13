@@ -1,11 +1,11 @@
 import React from "react";
-import { fetchQuizzes } from "../utils/index";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import QuizzesContainer from "../components/QuizzesContainer";
+import { fetchQuizzes } from "../utils";
 
 const Dashboard = () => {
-  useEffect(() => {
-    fetchQuizzes();
-  }, []);
+  const data = fetchQuizzes();
+  console.log(data);
   return (
     <div className="container mx-auto">
       <div>
@@ -16,11 +16,13 @@ const Dashboard = () => {
       <main className="border rounded-md py-5 px-10">
         <div className="flex justify-between my-12">
           <h2 className="text-4xl">All Quizzes</h2>
-          <button className="bg-blue-400 px-4 py-2 text-white rounded-md">
-            New Quiz
-          </button>
+          <Link to="create/0">
+            <button className="bg-blue-400 px-4 py-2 text-white rounded-md">
+              New Quiz
+            </button>
+          </Link>
         </div>
-        <div className="flex flex-col"></div>
+        <QuizzesContainer />
       </main>
     </div>
   );

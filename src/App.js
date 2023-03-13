@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index path="/" element={<Dashboard />} />
-        <Route path="create" element={<CreateQuiz />} />
+        <Route path="create/:id" element={<CreateQuiz />} />
         <Route path="attempt" element={<AttemptQuiz />} />
       </Routes>
     </BrowserRouter>
