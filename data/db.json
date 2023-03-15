@@ -2,7 +2,7 @@
   "quizzes": [
     {
       "id": 1,
-      "title": "QUIZ 12",
+      "title": "QUIZ 13",
       "desc": "description of quiz 13",
       "questions": [
         {
@@ -90,6 +90,57 @@
           "title": "Test Question ",
           "type": "Multi Select",
           "options": []
+        }
+      ]
+    },
+    {
+      "id": 1678784385283,
+      "title": "Quiz 2",
+      "desc": "This is the quiz 2",
+      "questions": [
+        {
+          "questionId": 1678784112644,
+          "title": "Who is the president of India",
+          "type": "Single Select",
+          "options": [
+            {
+              "optionId": 1678784120124,
+              "optionValue": "Ramnath Kovind",
+              "isCorrect": false
+            },
+            {
+              "optionId": 1678784130211,
+              "optionValue": "Prathiba Pattil",
+              "isCorrect": false
+            },
+            {
+              "optionId": 1678784144969,
+              "optionValue": "A P J Abdul Kalam",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "questionId": 1678783960136,
+          "title": "How old are you ?",
+          "type": "Single Select",
+          "options": [
+            {
+              "optionId": 1678783980315,
+              "optionValue": "Greater than 18",
+              "isCorrect": false
+            },
+            {
+              "optionId": 1678783988475,
+              "optionValue": "Less than 20",
+              "isCorrect": true
+            },
+            {
+              "optionId": 1678783998281,
+              "optionValue": "More than 20",
+              "isCorrect": false
+            }
+          ]
         }
       ]
     }

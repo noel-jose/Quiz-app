@@ -107,7 +107,8 @@ const CreateQuiz = () => {
   };
 
   const deleteQuestion = (id) => {
-    if (currQues.questionId == id) setShowQuestion(false);
+    if (showQuestion == true && currQues.questionId == id)
+      setShowQuestion(false);
     setQuestions(questions.filter((question) => question.questionId != id));
   };
 
