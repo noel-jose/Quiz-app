@@ -10,15 +10,14 @@ const Question = ({ question, addQuestion }) => {
   const handleAddOption = () => {
     setOptions((prev) => [
       ...prev,
-      { optionId: Date.now(), optionValue: "", isCorrect: false },
+      { id: Date.now(), value: "", isCorrect: false },
     ]);
   };
 
   const handleCorrectOption = (id) => {
     setOptions(
       options.map((option) => {
-        if (option.optionId == id)
-          return { ...option, isCorrect: !option.isCorrect };
+        if (option.id == id) return { ...option, isCorrect: !option.isCorrect };
         else return option;
       })
     );
@@ -28,14 +27,14 @@ const Question = ({ question, addQuestion }) => {
     const newValue = e.target.value;
     setOptions(
       options.map((option) => {
-        if (option.optionId == id) return { ...option, optionValue: newValue };
+        if (option.id == id) return { ...option, value: newValue };
         else return option;
       })
     );
   };
 
   const removeOption = (id) => {
-    setOptions(options.filter((option) => option.optionId != id));
+    setOptions(options.filter((option) => option.id != id));
   };
 
   return (
@@ -98,18 +97,18 @@ const Question = ({ question, addQuestion }) => {
             <input
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-1 px-4  leading-tight focus:outline-none focus:bg-white"
               type="text"
-              value={option.optionValue}
-              onChange={(e) => handleEditOption(e, option.optionId)}
+              value={option.value}
+              onChange={(e) => handleEditOption(e, option.id)}
             />
             <button
               className="px-3 bg-red-500 py-1 text-white rounded-md  mx-2 text-sm"
-              onClick={() => removeOption(option.optionId)}
+              onClick={() => removeOption(option.id)}
             >
               Remove
             </button>
             <button
               className="px-3 bg-blue-400 py-1 text-white rounded-md  mx-1 text-xs"
-              onClick={() => handleCorrectOption(option.optionId)}
+              onClick={() => handleCorrectOption(option.id)}
             >
               {option.isCorrect == true ? "Set as Wrong" : "Set as Correct"}
             </button>
@@ -131,7 +130,7 @@ const Question = ({ question, addQuestion }) => {
         className="px-3 bg-blue-400 py-2 text-white rounded-md mb-6 mx-3 text-sm"
         onClick={() =>
           addQuestion({
-            questionId: question.questionId,
+            id: question.id,
             title: quesTitle,
             type: quesType,
             options: options,

@@ -13,7 +13,7 @@ const QuestionListItem = ({ question, editQuestion, deleteQuestion }) => {
         </button>
         <button
           className="px-3 bg-red-500 py-1 text-white rounded-md  mx-2 text-sm"
-          onClick={() => deleteQuestion(question.questionId)}
+          onClick={() => deleteQuestion(question.id)}
         >
           Delete
         </button>

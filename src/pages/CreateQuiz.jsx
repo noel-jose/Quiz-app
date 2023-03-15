@@ -75,7 +75,7 @@ const CreateQuiz = () => {
     let isPresent = false;
     setQuestions(
       questions.map((q) => {
-        if (q.questionId == question.questionId) {
+        if (q.id == question.id) {
           isPresent = true;
           return question;
         } else return q;
@@ -88,7 +88,7 @@ const CreateQuiz = () => {
   const createQuestion = () => {
     setShowQuestion(false);
     const tempQues = {};
-    tempQues.questionId = Date.now();
+    tempQues.id = Date.now();
     tempQues.title = "";
     tempQues.type = "Single Select";
     tempQues.options = [];
@@ -107,9 +107,8 @@ const CreateQuiz = () => {
   };
 
   const deleteQuestion = (id) => {
-    if (showQuestion == true && currQues.questionId == id)
-      setShowQuestion(false);
-    setQuestions(questions.filter((question) => question.questionId != id));
+    if (showQuestion == true && currQues.id == id) setShowQuestion(false);
+    setQuestions(questions.filter((question) => question.id != id));
   };
 
   return (

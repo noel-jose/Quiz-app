@@ -4,7 +4,14 @@ const attemptReducer = (state = [], action) => {
       return [...state, action.payload.data];
     case "CLEAR_ANSWER":
       return state.filter((answer) => answer.id != action.payload.id);
-    case "CLEAN":
-      return [];
+    default:
+      return state;
   }
 };
+
+answers: [
+  {
+    id: questionId,
+    selected: [],
+  },
+];

@@ -6,7 +6,7 @@ import { useState } from "react";
 const AttemptQuiz = () => {
   const { id } = useParams();
   console.log(id);
-
+  
   const [quiz, setQuiz] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
