@@ -29,7 +29,7 @@ const CreateQuiz = () => {
       axios.post(
         process.env.REACT_APP_BASE_URL,
         JSON.stringify({
-          id: Date.now(),
+          id: crypto.randomUUID(),
           title: quiz.title,
           desc: quiz.desc,
           questions: questions,
@@ -44,7 +44,7 @@ const CreateQuiz = () => {
       axios.put(
         `${process.env.REACT_APP_BASE_URL}/${id}`,
         JSON.stringify({
-          id: Date.now(),
+          id: crypto.randomUUID(),
           title: quiz.title,
           desc: quiz.desc,
           questions: questions,
@@ -88,7 +88,7 @@ const CreateQuiz = () => {
   const createQuestion = () => {
     setShowQuestion(false);
     const tempQues = {};
-    tempQues.id = Date.now();
+    tempQues.id = crypto.randomUUID();
     tempQues.title = "";
     tempQues.type = "Single Select";
     tempQues.options = [];
