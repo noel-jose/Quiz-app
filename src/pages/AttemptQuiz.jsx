@@ -16,6 +16,7 @@ const AttemptQuiz = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const [showOutro, setShowOutro] = useState(false);
+  const [score, setScore] = useState(0);
 
   const fetchAQuiz = (id) => {
     console.log(`${process.env.REACT_APP_BASE_URL}/${id}`);
@@ -25,6 +26,22 @@ const AttemptQuiz = () => {
         console.log(response.data);
         setIsLoaded(true);
       });
+  };
+
+  const calculateScore = (answers, correctAnswers) => {
+    console.log("Answer", answers);
+    console.log("Question", correctAnswers);
+
+    let s = 0;
+    answers.map((answer) => {
+      const answerId = answer.id;
+      const index = correctAnswers.findIndex((item) => item.id == answerId);
+      console.log(index, correctAnswers[index].correctAnswers);
+      const cAns = correctAnswers[index].correctAnswers;
+      if (cAns.every((r) => answer.selected.includes(r))) s = s + 1;
+    });
+    setScore(s);
+    console.log("Score", score);
   };
 
   useEffect(() => {
@@ -40,7 +57,9 @@ const AttemptQuiz = () => {
           setShowIntro={setShowIntro}
         />
       )}
-      {showOutro && <QuizOutro />}
+      {showOutro && (
+        <QuizOutro score={score} total={quiz.questions?.length} id={quiz.id} />
+      )}
       {showIntro == false && showOutro == false && (
         <div>
           <h1 className="text-3xl font-semibold my-12">
@@ -61,6 +80,7 @@ const AttemptQuiz = () => {
               className="m-2 text-center px-3 bg-blue-400 py-2 text-white rounded-md  text-sm"
               onClick={() => {
                 setShowOutro(true);
+                calculateScore(answers, quiz.correctAnswers);
               }}
             >
               Submit Quiz

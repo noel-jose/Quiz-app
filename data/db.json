@@ -13,13 +13,16 @@
             {
               "id": 1678962627562,
               "value": "This is the anser",
-              "isCorrect": false
+              "isCorrect": true
             },
             {
               "id": 1678962633964,
               "value": "THis is not the answer",
               "isCorrect": false
             }
+          ],
+          "correctAnswers": [
+            "This is the anser"
           ]
         },
         {
@@ -47,28 +50,42 @@
               "value": "Q5",
               "isCorrect": true
             }
+          ],
+          "correctAnswers": [
+            "Q2",
+            "Q3",
+            "Q5"
           ]
         },
         {
           "id": 1678726232854,
-          "title": "This is a third question",
-          "type": "Multi Select",
+          "title": "Which of the following is an SUV",
+          "type": "Dropdown",
           "options": [
             {
-              "id": 1678726245921,
-              "value": "value 1",
-              "isCorrect": true
-            },
-            {
-              "id": 1678726250139,
-              "value": "value 2",
+              "id": 1678681265991,
+              "value": "Maruti Alto",
               "isCorrect": false
             },
             {
-              "id": 1678726253948,
-              "value": "value 3",
+              "id": 1678766352177,
+              "value": "Swift",
               "isCorrect": true
+            },
+            {
+              "id": 1678961406866,
+              "value": "Tata Harrier",
+              "isCorrect": true
+            },
+            {
+              "id": 1678961412331,
+              "value": "Nano",
+              "isCorrect": false
             }
+          ],
+          "correctAnswers": [
+            "Swift",
+            "Tata Harrier"
           ]
         },
         {
@@ -96,12 +113,15 @@
               "value": "Narendra Modi",
               "isCorrect": false
             }
+          ],
+          "correctAnswers": [
+            "Mahatma Gandhi"
           ]
         },
         {
           "id": 1678681259046,
           "title": "Which of the following is an SUV",
-          "type": "Dropdown",
+          "type": "Multi Select",
           "options": [
             {
               "id": 1678681265991,
@@ -123,6 +143,46 @@
               "value": "Nano",
               "isCorrect": false
             }
+          ],
+          "correctAnswers": [
+            "Swift",
+            "Tata Harrier"
+          ]
+        }
+      ],
+      "correctAnswers": [
+        {
+          "id": 1678875953736,
+          "correctAnswers": [
+            "This is the anser"
+          ]
+        },
+        {
+          "id": 1678854355011,
+          "correctAnswers": [
+            "Q2",
+            "Q3",
+            "Q5"
+          ]
+        },
+        {
+          "id": 1678726232854,
+          "correctAnswers": [
+            "Swift",
+            "Tata Harrier"
+          ]
+        },
+        {
+          "id": 1678726223552,
+          "correctAnswers": [
+            "Mahatma Gandhi"
+          ]
+        },
+        {
+          "id": 1678681259046,
+          "correctAnswers": [
+            "Swift",
+            "Tata Harrier"
           ]
         }
       ]
@@ -220,6 +280,18 @@
           "type": "Multi Select",
           "options": []
         }
+      ],
+      "correctAnswers": [
+        {
+          "id": 1678872972080
+        },
+        {
+          "id": 1678872868345
+        },
+        {
+          "id": 1678872847084
+        },
+        {}
       ]
     },
     {
@@ -295,6 +367,43 @@
       "title": "New TEst",
       "desc": "This is the new test",
       "questions": []
+    },
+    {
+      "id": "cf4cdabb-bec3-4709-88c4-79fe4207ef4d",
+      "title": "Test Quiz",
+      "desc": "This is a test Quiz",
+      "questions": [
+        {
+          "id": "53def283-4c89-4646-a30b-92ac6bfe2f56",
+          "title": "QUestion 1",
+          "type": "Multi Select",
+          "options": [
+            {
+              "id": 1679057154121,
+              "value": "Opion 1",
+              "isCorrect": false
+            },
+            {
+              "id": 1679057157985,
+              "value": "op2",
+              "isCorrect": false
+            },
+            {
+              "id": 1679057160900,
+              "value": "op4",
+              "isCorrect": false
+            },
+            {
+              "id": 1679057165095,
+              "value": "op5",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswers": [
+            "op5"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,18 @@ const CreateQuiz = () => {
       });
   };
 
+  const correctAnswers = (questions) => {
+    const correctAns = [];
+    questions.map((question) => {
+      correctAns.push({
+        id: question.id,
+        correctAnswers: question.correctAnswers,
+      });
+    });
+    console.log(correctAns);
+    return correctAns;
+  };
+
   const saveAQuiz = () => {
     if (id == 0) {
       axios.post(
@@ -33,6 +45,7 @@ const CreateQuiz = () => {
           title: quiz.title,
           desc: quiz.desc,
           questions: questions,
+          correctAnswers: correctAnswers(questions),
         }),
         {
           headers: {
@@ -48,6 +61,7 @@ const CreateQuiz = () => {
           title: quiz.title,
           desc: quiz.desc,
           questions: questions,
+          correctAnswers: correctAnswers(questions),
         }),
         {
           headers: {
@@ -185,6 +199,7 @@ const CreateQuiz = () => {
             className="px-3 bg-blue-400 py-2 text-white rounded-md mb-6 mx-3 text-sm"
             onClick={() => {
               saveAQuiz();
+              correctAnswers(questions);
               navigate("/");
             }}
           >

@@ -1,4 +1,4 @@
-const attemptReducer = (state = ["hello", "noel"], action) => {
+const attemptReducer = (state = [], action) => {
   switch (action.type) {
     case "SAVE_ANSWER":
       let isPresent = false;

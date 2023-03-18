@@ -7,6 +7,14 @@ const Question = ({ question, addQuestion }) => {
   const [quesTitle, setQuesTitle] = useState(question.title);
   const [quesType, setQuesType] = useState(question.type);
 
+  const setCorrectAnswers = (options) => {
+    let correctAns = [];
+    options.map((option) => {
+      if (option.isCorrect) correctAns.push(option.value);
+    });
+    return correctAns;
+  };
+
   const handleAddOption = () => {
     setOptions((prev) => [
       ...prev,
@@ -134,6 +142,7 @@ const Question = ({ question, addQuestion }) => {
             title: quesTitle,
             type: quesType,
             options: options,
+            correctAnswers: setCorrectAnswers(options),
           })
         }
       >
