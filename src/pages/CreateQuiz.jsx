@@ -83,7 +83,10 @@ const CreateQuiz = () => {
   console.log(questions);
   console.log(quiz);
 
-  useEffect(() => {}, []);
+  // useEffect(() => {
+  //   setShowQuestion(false);
+  //   setShowQuestion(true);
+  // }, [currQues]);
 
   const addQuestion = (question) => {
     let isPresent = false;
@@ -179,7 +182,7 @@ const CreateQuiz = () => {
             questions.map((question) => (
               <QuestionListItem
                 question={question}
-                key={question.questionId}
+                key={question.id}
                 editQuestion={editQuestion}
                 deleteQuestion={deleteQuestion}
               />
@@ -210,7 +213,7 @@ const CreateQuiz = () => {
         <div className="border p-3 rounded-md">
           {showQuestion == true && (
             <Question
-              key={currQues.questionId}
+              key={currQues.id}
               question={currQues}
               addQuestion={addQuestion}
             />
