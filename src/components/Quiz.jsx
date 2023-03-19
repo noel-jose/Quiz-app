@@ -15,12 +15,14 @@ const Quiz = ({ quiz, fetchQuizzes, setIsLoaded }) => {
       <span className="">{quiz.title}</span>
       <span>{quiz.questions?.length}</span>
       <div>
-        <button
-          className="px-3 bg-green-400 py-2 text-white rounded-md mb-6 mx-3 text-sm"
-          onClick={() => navigate(`attempt/${quiz.id}`)}
-        >
-          Attempt
-        </button>
+        {quiz.questions?.length > 0 && (
+          <button
+            className="px-3 bg-green-400 py-2 text-white rounded-md mb-6 mx-3 text-sm"
+            onClick={() => navigate(`attempt/${quiz.id}`)}
+          >
+            Attempt
+          </button>
+        )}
         <button
           className="px-3 bg-blue-400 py-2 text-white rounded-md mb-6 mx-3 text-sm"
           onClick={() => navigate(`create/${quiz.id}`)}
