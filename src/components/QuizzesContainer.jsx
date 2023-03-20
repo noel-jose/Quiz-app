@@ -19,6 +19,11 @@ const QuizzesContainer = () => {
 
   return (
     <div className="flex flex-col">
+      <div className="grid grid-cols-3">
+        <span className="font-semibold pb-5 text-xl">Quiz Name</span>
+        <span className="font-semibold pb-5 text-xl">Number of questions</span>
+        <span className="font-semibold pb-5 text-xl">Options</span>
+      </div>
       {isLoaded == true &&
         (quizzes.length > 0 ? (
           quizzes.map((quiz) => (

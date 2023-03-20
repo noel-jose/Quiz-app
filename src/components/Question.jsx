@@ -137,20 +137,21 @@ const Question = ({ question, addQuestion }) => {
       <button
         className="px-3 bg-blue-400 py-2 text-white rounded-md mb-6 mx-3 text-sm"
         onClick={() => {
+          const correctAnswerCount = setCorrectAnswers(options).length;
           let optionsArePresent = 0;
           let correctOptionsArePresent = 0;
-          const singleOptionSelected =
-            quesType == ("Single Select" || "Dropdown") &&
-            setCorrectAnswers(options).length >= 2;
+          let singleOptionSelected =
+            (quesType == "Single Select" || "Dropdown") &&
+            correctAnswerCount >= 2;
           if (options.length <= 0) {
             alert("Add an option to the question");
             optionsArePresent = 1;
           }
-          if (setCorrectAnswers(options).length == 0) {
+          if (correctAnswerCount == 0) {
             alert("Please set atleast one option as correct");
             correctOptionsArePresent = 1;
           }
-          if (singleOptionSelected)
+          if (singleOptionSelected == true)
             alert(
               "Can have only one correct answer for single select and dropdown questions"
             );
