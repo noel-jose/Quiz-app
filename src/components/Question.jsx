@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useRef } from "react";
 
 const Question = ({ question, addQuestion }) => {
-  console.log(question);
   const [options, setOptions] = useState(question.options);
   const [quesTitle, setQuesTitle] = useState(question.title);
   const [quesType, setQuesType] = useState(question.type);
@@ -13,11 +12,6 @@ const Question = ({ question, addQuestion }) => {
       if (option.isCorrect) correctAns.push(option.value);
     });
     return correctAns;
-  };
-
-  const alertFunction = (msg) => {
-    console.log(msg);
-    alert(msg);
   };
 
   const handleAddOption = () => {
@@ -148,13 +142,10 @@ const Question = ({ question, addQuestion }) => {
           const singleOptionSelected =
             quesType == ("Single Select" || "Dropdown") &&
             setCorrectAnswers(options).length >= 2;
-          console.log("length", options.length);
           if (options.length <= 0) {
             alert("Add an option to the question");
-            console.log("Options are presetn", optionsArePresent);
             optionsArePresent = 1;
           }
-          console.log(setCorrectAnswers(options).length);
           if (setCorrectAnswers(options).length == 0) {
             alert("Please set atleast one option as correct");
             correctOptionsArePresent = 1;

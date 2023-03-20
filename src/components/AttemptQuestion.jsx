@@ -25,7 +25,7 @@ const AttemptQuestion = ({ question, index }) => {
                   name=""
                   value={option.value}
                 />
-                <label htmlFor="">{option.value}</label>{" "}
+                <label htmlFor=""> {option.value}</label>{" "}
               </div>
             ))}
           </div>
@@ -74,7 +74,6 @@ const AttemptQuestion = ({ question, index }) => {
 
   return (
     <div className="border rounded-md py-5 px-10 m-2 flex flex-col justify-between items-start">
-      {answer}
       <span>
         <span className="font-semibold">Q{index + 1}</span>. {question.title}
       </span>
