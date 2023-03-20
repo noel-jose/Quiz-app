@@ -47,10 +47,7 @@ const Question = ({ question, addQuestion }) => {
   return (
     <>
       <div class="w-full px-3 mb-6 md:mb-0">
-        <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="question"
-        >
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
           Question
         </label>
         <input
@@ -63,10 +60,7 @@ const Question = ({ question, addQuestion }) => {
         />
       </div>
       <div class="w-full px-3 mb-6 md:mb-0">
-        <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-state"
-        >
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
           State
         </label>
         <div class="relative">
@@ -140,9 +134,7 @@ const Question = ({ question, addQuestion }) => {
           const correctAnswerCount = setCorrectAnswers(options).length;
           let optionsArePresent = 0;
           let correctOptionsArePresent = 0;
-          let singleOptionSelected =
-            (quesType == "Single Select" || "Dropdown") &&
-            correctAnswerCount >= 2;
+          let singleOptionSelected = 0;
           if (options.length <= 0) {
             alert("Add an option to the question");
             optionsArePresent = 1;
@@ -151,10 +143,16 @@ const Question = ({ question, addQuestion }) => {
             alert("Please set atleast one option as correct");
             correctOptionsArePresent = 1;
           }
-          if (singleOptionSelected == true)
-            alert(
-              "Can have only one correct answer for single select and dropdown questions"
-            );
+          console.log(quesType);
+          if (quesType == "Single Select" || quesType == "Dropdown") {
+            console.log("QUESTION IS OF TYPE NOT MULTISELECT");
+            if (correctAnswerCount >= 2) {
+              alert(
+                "Can have only one correct answer for single select and dropdown questions"
+              );
+              singleOptionSelected = 1;
+            }
+          }
           if (
             optionsArePresent == 0 &&
             correctOptionsArePresent == 0 &&
