@@ -5,7 +5,6 @@ import { fetchQuizzes } from "../utils";
 
 const Dashboard = () => {
   const data = fetchQuizzes();
-  console.log(data);
   return (
     <div className="container mx-auto">
       <div>
