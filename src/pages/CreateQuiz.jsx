@@ -8,19 +8,16 @@ import { useNavigate } from "react-router-dom";
 
 const CreateQuiz = () => {
   const { id } = useParams();
-  console.log(id);
   const navigate = useNavigate();
 
   const [quiz, setQuiz] = useState({});
   const [questions, setQuestions] = useState([]);
 
   const fetchAQuiz = (id) => {
-    console.log(`${process.env.REACT_APP_BASE_URL}/${id}`);
     if (id != 0)
       axios.get(`${process.env.REACT_APP_BASE_URL}/${id}`).then((response) => {
         setQuiz(response.data);
         setQuestions(response.data.questions);
-        console.log(response.data);
       });
   };
 
@@ -32,7 +29,6 @@ const CreateQuiz = () => {
         correctAnswers: question.correctAnswers,
       });
     });
-    console.log(correctAns);
     return correctAns;
   };
 
@@ -74,19 +70,10 @@ const CreateQuiz = () => {
 
   useEffect(() => {
     fetchAQuiz(id);
-    console.log(quiz);
   }, []);
 
   const [showQuestion, setShowQuestion] = useState(false);
   const [currQues, setCurrQues] = useState();
-
-  console.log(questions);
-  console.log(quiz);
-
-  // useEffect(() => {
-  //   setShowQuestion(false);
-  //   setShowQuestion(true);
-  // }, [currQues]);
 
   const addQuestion = (question) => {
     let isPresent = false;
@@ -111,10 +98,7 @@ const CreateQuiz = () => {
     tempQues.options = [];
 
     setCurrQues(tempQues);
-    console.log(currQues);
     setShowQuestion(true);
-    console.log(showQuestion);
-    console.log("create Question Called");
   };
 
   const editQuestion = (question) => {
