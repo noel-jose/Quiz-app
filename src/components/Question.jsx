@@ -15,6 +15,11 @@ const Question = ({ question, addQuestion }) => {
     return correctAns;
   };
 
+  const alertFunction = (msg) => {
+    console.log(msg);
+    alert(msg);
+  };
+
   const handleAddOption = () => {
     setOptions((prev) => [
       ...prev,
@@ -60,6 +65,7 @@ const Question = ({ question, addQuestion }) => {
           type="text"
           value={quesTitle}
           onChange={(e) => setQuesTitle(e.target.value)}
+          required
         />
       </div>
       <div class="w-full px-3 mb-6 md:mb-0">
@@ -136,15 +142,40 @@ const Question = ({ question, addQuestion }) => {
 
       <button
         className="px-3 bg-blue-400 py-2 text-white rounded-md mb-6 mx-3 text-sm"
-        onClick={() =>
-          addQuestion({
-            id: question.id,
-            title: quesTitle,
-            type: quesType,
-            options: options,
-            correctAnswers: setCorrectAnswers(options),
-          })
-        }
+        onClick={() => {
+          let optionsArePresent = 0;
+          let correctOptionsArePresent = 0;
+          const singleOptionSelected =
+            quesType == ("Single Select" || "Dropdown") &&
+            setCorrectAnswers(options).length >= 2;
+          console.log("length", options.length);
+          if (options.length <= 0) {
+            alert("Add an option to the question");
+            console.log("Options are presetn", optionsArePresent);
+            optionsArePresent = 1;
+          }
+          console.log(setCorrectAnswers(options).length);
+          if (setCorrectAnswers(options).length == 0) {
+            alert("Please set atleast one option as correct");
+            correctOptionsArePresent = 1;
+          }
+          if (singleOptionSelected)
+            alert(
+              "Can have only one correct answer for single select and dropdown questions"
+            );
+          if (
+            optionsArePresent == 0 &&
+            correctOptionsArePresent == 0 &&
+            !singleOptionSelected
+          )
+            addQuestion({
+              id: question.id,
+              title: quesTitle,
+              type: quesType,
+              options: options,
+              correctAnswers: setCorrectAnswers(options),
+            });
+        }}
       >
         Save Question
       </button>

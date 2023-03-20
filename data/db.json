@@ -19,6 +19,11 @@
               "id": 1678962633964,
               "value": "THis is not the answer",
               "isCorrect": false
+            },
+            {
+              "id": 1679218464232,
+              "value": "option2",
+              "isCorrect": false
             }
           ],
           "correctAnswers": [
@@ -295,12 +300,6 @@
       ]
     },
     {
-      "id": 1678873208859,
-      "title": "QUIZ NEXT",
-      "desc": "THIS IS A TEST QUOZ",
-      "questions": []
-    },
-    {
       "id": 1678875386366,
       "title": "When the quiz",
       "desc": "Thisisthedescription",
@@ -357,22 +356,28 @@
       ]
     },
     {
-      "id": 1678985885063,
-      "title": "Title",
-      "desc": "This is the title",
-      "questions": []
-    },
-    {
-      "id": "3c907f19-1030-4cf9-8340-dc4f7cd45b87",
-      "title": "New TEst",
-      "desc": "This is the new test",
-      "questions": []
-    },
-    {
       "id": "cf4cdabb-bec3-4709-88c4-79fe4207ef4d",
       "title": "Test Quiz",
       "desc": "This is a test Quiz",
       "questions": [
+        {
+          "id": "0e32b65e-5152-4b05-ac5b-2a903f66c62b",
+          "title": "This is a question",
+          "type": "Multi Select",
+          "options": [
+            {
+              "id": 1679277552410,
+              "value": "OPTON 4",
+              "isCorrect": false
+            },
+            {
+              "id": 1679277557616,
+              "value": "OPTION 3",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswers": []
+        },
         {
           "id": "53def283-4c89-4646-a30b-92ac6bfe2f56",
           "title": "QUestion 1",
@@ -401,6 +406,119 @@
           ],
           "correctAnswers": [
             "op5"
+          ]
+        }
+      ],
+      "correctAnswers": [
+        {
+          "id": "0e32b65e-5152-4b05-ac5b-2a903f66c62b",
+          "correctAnswers": []
+        },
+        {
+          "id": "53def283-4c89-4646-a30b-92ac6bfe2f56",
+          "correctAnswers": [
+            "op5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d9c49639-6aea-48ec-9336-d7ffaf24faa8",
+      "title": "This is a new QUIZ",
+      "desc": "THIS IS A DESC",
+      "questions": [
+        {
+          "id": "b089d96f-418b-42e1-964f-b3f6b6e55d78",
+          "title": "TIME PASS",
+          "type": "Multi Select",
+          "options": [
+            {
+              "id": 1679277360944,
+              "value": "CORRECT ",
+              "isCorrect": true
+            },
+            {
+              "id": 1679277365630,
+              "value": "WRONG",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswers": [
+            "CORRECT "
+          ]
+        },
+        {
+          "id": "19224969-795e-4754-bc5d-85b607ebe598",
+          "title": "TITLE",
+          "type": "Multi Select",
+          "options": [
+            {
+              "id": 1679277292074,
+              "value": "OPTION 1",
+              "isCorrect": false
+            },
+            {
+              "id": 1679277297783,
+              "value": "OPTION 3",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswers": [
+            "OPTION 3"
+          ]
+        }
+      ],
+      "correctAnswers": [
+        {
+          "id": "b089d96f-418b-42e1-964f-b3f6b6e55d78",
+          "correctAnswers": [
+            "CORRECT "
+          ]
+        },
+        {
+          "id": "19224969-795e-4754-bc5d-85b607ebe598",
+          "correctAnswers": [
+            "OPTION 3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3abd1ce3-97c4-4839-b495-191c8cfcf60f",
+      "title": "Title",
+      "desc": "Tis is the desc",
+      "questions": [
+        {
+          "id": "155ccb4c-0286-44f7-997f-f16d3d43d175",
+          "title": "Test",
+          "type": "Single Select",
+          "options": [
+            {
+              "id": 1679313412608,
+              "value": "This is an option",
+              "isCorrect": false
+            },
+            {
+              "id": 1679313425745,
+              "value": "Option 2",
+              "isCorrect": true
+            },
+            {
+              "id": 1679313430054,
+              "value": "Option 3",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswers": [
+            "Option 2"
+          ]
+        }
+      ],
+      "correctAnswers": [
+        {
+          "id": "155ccb4c-0286-44f7-997f-f16d3d43d175",
+          "correctAnswers": [
+            "Option 2"
           ]
         }
       ]
