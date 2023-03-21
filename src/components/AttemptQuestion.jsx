@@ -24,6 +24,7 @@ const AttemptQuestion = ({ question, index }) => {
                   checked={answer == option.value}
                   name=""
                   value={option.value}
+                  onChange={(e) => setAnswer([e.target.value])}
                 />
                 <label htmlFor=""> {option.value}</label>{" "}
               </div>
@@ -79,21 +80,25 @@ const AttemptQuestion = ({ question, index }) => {
       </span>
       {displayTheOptions(question)}
       <div className="flex gap-2 my-3">
-        <button
-          className="px-3 text-blue-400 py-2 border border-blue-200 rounded-md  text-sm"
-          onClick={() => {
-            clearSelectedAnswer();
-            dispatch(clearAnswer(question.id));
-          }}
-        >
-          Clear Answer
-        </button>
-        <button
-          className="px-3 bg-blue-400 py-2 text-white rounded-md  text-sm"
-          onClick={() => dispatch(saveAnswer(question.id, answer))}
-        >
-          Save Answer
-        </button>
+        {answer.length > 0 && (
+          <button
+            className="px-3 text-blue-400 py-2 border border-blue-200 rounded-md  text-sm"
+            onClick={() => {
+              clearSelectedAnswer();
+              dispatch(clearAnswer(question.id));
+            }}
+          >
+            Clear Answer
+          </button>
+        )}
+        {answer.length > 0 && (
+          <button
+            className="px-3 bg-blue-400 py-2 text-white rounded-md  text-sm"
+            onClick={() => dispatch(saveAnswer(question.id, answer))}
+          >
+            Save Answer
+          </button>
+        )}
       </div>
     </div>
   );
