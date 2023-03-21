@@ -91,12 +91,13 @@ const CreateQuiz = () => {
 
   const createQuestion = () => {
     setShowQuestion(false);
-    const tempQues = {};
-    tempQues.id = crypto.randomUUID();
-    tempQues.title = "";
-    tempQues.type = "Single Select";
-    tempQues.options = [];
-
+    const tempQues = {
+      id: crypto.randomUUID(),
+      title: "",
+      type: "Single Select",
+      options: [],
+    };
+    
     setCurrQues(tempQues);
     setShowQuestion(true);
   };
