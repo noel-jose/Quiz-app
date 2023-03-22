@@ -3,6 +3,7 @@ import { useState } from "react";
 import { saveAnswer } from "../state/actionCreator";
 import { clearAnswer } from "../state/actionCreator";
 import { useDispatch } from "react-redux";
+import { SINGLE_SELECT, MULTI_SELECT, DROPDOWN } from "../utils/constant";
 
 const AttemptQuestion = ({ question, index }) => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const AttemptQuestion = ({ question, index }) => {
 
   const displayTheOptions = (question) => {
     switch (question.type) {
-      case "Single Select":
+      case SINGLE_SELECT:
         return (
           <div onChange={(e) => setAnswer([e.target.value])}>
             {question.options.map((option) => (
@@ -32,7 +33,7 @@ const AttemptQuestion = ({ question, index }) => {
           </div>
         );
 
-      case "Multi Select":
+      case MULTI_SELECT:
         return question.options.map((option) => (
           <div key={option.id}>
             <input
@@ -51,7 +52,7 @@ const AttemptQuestion = ({ question, index }) => {
             <label htmlFor="">{option.value}</label>
           </div>
         ));
-      case "Dropdown":
+      case DROPDOWN:
         return (
           <div>
             <select
