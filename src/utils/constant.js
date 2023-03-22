@@ -1,5 +1,4 @@
-const questionType = {
-  1: "Single Select",
-  2: "Multi Select",
-  3: "Drop Down",
-};
+export const SINGLE_SELECT = "Single Select";
+export const MULTI_SELECT = "Multi Select";
+export const DROPDOWN = "Dropdown";
+
