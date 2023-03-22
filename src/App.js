@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AttemptQuiz from "./pages/AttemptQuiz";
 import CreateQuiz from "./pages/CreateQuiz";
