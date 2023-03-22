@@ -1,7 +1,14 @@
 import axios from "axios";
 
-export const fetchQuizzes = () => {
-  axios.get(process.env.REACT_APP_BASE_URL).then((response) => response.data);
+export const fetchQuizzes = (setData) => {
+  axios
+    .get(process.env.REACT_APP_BASE_UR)
+    .then((response) => {
+      setData(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 export const fetchAQuiz = (id) => {

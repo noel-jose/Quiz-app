@@ -2,12 +2,12 @@ import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Quiz = ({ quiz, fetchQuizzes, setIsLoaded }) => {
+const Quiz = ({ quiz, fetchQuizzes, setIsLoading }) => {
   const deleteAQuiz = () => {
     axios.delete(`${process.env.REACT_APP_BASE_URL}/${quiz.id}`);
-    setIsLoaded(false);
+    setIsLoading(false);
     fetchQuizzes();
-    setIsLoaded(true);
+    setIsLoading(true);
   };
   const navigate = useNavigate();
   return (

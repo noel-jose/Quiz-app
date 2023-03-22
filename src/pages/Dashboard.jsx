@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import QuizzesContainer from "../components/QuizzesContainer";
 import { fetchQuizzes } from "../utils";
 
 const Dashboard = () => {
-  const data = fetchQuizzes();
   return (
     <div className="container mx-auto">
       <div>
