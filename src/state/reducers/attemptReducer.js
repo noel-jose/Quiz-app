@@ -6,7 +6,6 @@ const attemptReducer = (state = [], action) => {
       let isPresent = false;
       const newState = state.map((item) => {
         if (item.id == action.payload.id) {
-          console.log("Answer is already present");
           isPresent = true;
           return { ...item, selected: action.payload.selected };
         } else return item;
