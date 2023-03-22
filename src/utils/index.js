@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchQuizzes = (setData) => {
   axios
-    .get(process.env.REACT_APP_BASE_UR)
+    .get(process.env.REACT_APP_BASE_URL)
     .then((response) => {
       setData(response.data);
     })

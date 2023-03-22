@@ -23,11 +23,11 @@ const AttemptQuestion = ({ question, index }) => {
                 <input
                   type="radio"
                   checked={answer == option.value}
-                  name=""
+                  name={option.id}
                   value={option.value}
                   onChange={(e) => setAnswer([e.target.value])}
                 />
-                <label htmlFor=""> {option.value}</label>{" "}
+                <label htmlFor={option.id}> {option.value}</label>{" "}
               </div>
             ))}
           </div>
@@ -38,7 +38,7 @@ const AttemptQuestion = ({ question, index }) => {
           <div key={option.id}>
             <input
               type="checkbox"
-              name=""
+              name={option.id}
               checked={answer.includes(option?.value)}
               value={option.value}
               onChange={(e) =>
@@ -49,7 +49,7 @@ const AttemptQuestion = ({ question, index }) => {
                 )
               }
             />{" "}
-            <label htmlFor="">{option.value}</label>
+            <label htmlFor={option.id}>{option.value}</label>
           </div>
         ));
       case DROPDOWN:
