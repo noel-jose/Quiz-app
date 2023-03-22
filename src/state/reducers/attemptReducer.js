@@ -1,6 +1,8 @@
+import { SAVE_ANSWER, CLEAR_ANSWER } from "../../utils/constant";
+
 const attemptReducer = (state = [], action) => {
   switch (action.type) {
-    case "SAVE_ANSWER":
+    case SAVE_ANSWER:
       let isPresent = false;
       const newState = state.map((item) => {
         if (item.id == action.payload.id) {
@@ -11,7 +13,7 @@ const attemptReducer = (state = [], action) => {
       });
       if (isPresent == true) return newState;
       return [...state, action.payload];
-    case "CLEAR_ANSWER":
+    case CLEAR_ANSWER:
       return state.filter((answer) => answer.id != action.payload.id);
     default:
       return state;

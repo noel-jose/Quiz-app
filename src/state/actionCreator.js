@@ -1,6 +1,7 @@
+import { SAVE_ANSWER, CLEAR_ANSWER } from "../utils/constant";
 export const saveAnswer = (id, answer) => {
   return {
-    type: "SAVE_ANSWER",
+    type: SAVE_ANSWER,
     payload: {
       id: id,
       selected: answer,
@@ -10,7 +11,7 @@ export const saveAnswer = (id, answer) => {
 
 export const clearAnswer = (id) => {
   return {
-    type: "CLEAR_ANSWER",
+    type: CLEAR_ANSWER,
     payload: {
       id: id,
     },
