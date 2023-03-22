@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
+import { SINGLE_SELECT, MULTI_SELECT, DROPDOWN } from "../utils/constant";
 
 const Question = ({ question, addQuestion }) => {
   const [options, setOptions] = useState(question.options);
@@ -69,9 +70,9 @@ const Question = ({ question, addQuestion }) => {
             onChange={(e) => setQuesType(e.target.value)}
             value={quesType}
           >
-            <option>Single Select</option>
-            <option>Multi Select</option>
-            <option>Dropdown</option>
+            <option value={SINGLE_SELECT}>Single Select</option>
+            <option value={MULTI_SELECT}>Multi Select</option>
+            <option value={DROPDOWN}>Dropdown</option>
           </select>
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
             <svg
@@ -143,9 +144,7 @@ const Question = ({ question, addQuestion }) => {
             alert("Please set atleast one option as correct");
             correctOptionsArePresent = 1;
           }
-          console.log(quesType);
-          if (quesType == "Single Select" || quesType == "Dropdown") {
-            console.log("QUESTION IS OF TYPE NOT MULTISELECT");
+          if (quesType == SINGLE_SELECT || quesType == DROPDOWN) {
             if (correctAnswerCount >= 2) {
               alert(
                 "Can have only one correct answer for single select and dropdown questions"

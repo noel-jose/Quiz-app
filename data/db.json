@@ -31,7 +31,11 @@
               "isCorrect": true
             }
           ],
-          "correctAnswers": ["Intel", "Amd", "Snapdragon"]
+          "correctAnswers": [
+            "Intel",
+            "Amd",
+            "Snapdragon"
+          ]
         },
         {
           "id": "59290722-1257-4e4d-80c4-d624bb8125b5",
@@ -59,7 +63,9 @@
               "isCorrect": false
             }
           ],
-          "correctAnswers": ["128bit"]
+          "correctAnswers": [
+            "128bit"
+          ]
         },
         {
           "id": "70bbf001-c36b-4119-b517-cf3fd06ee0cc",
@@ -87,7 +93,9 @@
               "isCorrect": false
             }
           ],
-          "correctAnswers": ["Archie"]
+          "correctAnswers": [
+            "Archie"
+          ]
         },
         {
           "id": "18047fc7-4097-4c38-bb53-712e561b785f",
@@ -115,25 +123,37 @@
               "isCorrect": false
             }
           ],
-          "correctAnswers": ["Movie File"]
+          "correctAnswers": [
+            "Movie File"
+          ]
         }
       ],
       "correctAnswers": [
         {
           "id": "8dd2280e-7832-463e-b31c-af0069287772",
-          "correctAnswers": ["Intel", "Amd", "Snapdragon"]
+          "correctAnswers": [
+            "Intel",
+            "Amd",
+            "Snapdragon"
+          ]
         },
         {
           "id": "59290722-1257-4e4d-80c4-d624bb8125b5",
-          "correctAnswers": ["128bit"]
+          "correctAnswers": [
+            "128bit"
+          ]
         },
         {
           "id": "70bbf001-c36b-4119-b517-cf3fd06ee0cc",
-          "correctAnswers": ["Archie"]
+          "correctAnswers": [
+            "Archie"
+          ]
         },
         {
           "id": "18047fc7-4097-4c38-bb53-712e561b785f",
-          "correctAnswers": ["Movie File"]
+          "correctAnswers": [
+            "Movie File"
+          ]
         }
       ]
     },
@@ -168,7 +188,10 @@
               "isCorrect": true
             }
           ],
-          "correctAnswers": ["Kerala", "Telangana"]
+          "correctAnswers": [
+            "Kerala",
+            "Telangana"
+          ]
         },
         {
           "id": "12d62855-2aa3-4987-9848-c5ef39d50150",
@@ -196,7 +219,9 @@
               "isCorrect": false
             }
           ],
-          "correctAnswers": ["Karnataka"]
+          "correctAnswers": [
+            "Karnataka"
+          ]
         },
         {
           "id": "1bd55795-d38c-4959-9d19-79bc5d00b200",
@@ -224,7 +249,10 @@
               "isCorrect": false
             }
           ],
-          "correctAnswers": ["Telugu", "Urdu"]
+          "correctAnswers": [
+            "Telugu",
+            "Urdu"
+          ]
         },
         {
           "id": "ae31e25c-4a26-4ab8-8af9-e24da535dffa",
@@ -252,25 +280,72 @@
               "isCorrect": false
             }
           ],
-          "correctAnswers": ["8"]
+          "correctAnswers": [
+            "8"
+          ]
         }
       ],
       "correctAnswers": [
         {
           "id": "7ca709a8-3a3b-402f-8675-e8adfed3213a",
-          "correctAnswers": ["Kerala", "Telangana"]
+          "correctAnswers": [
+            "Kerala",
+            "Telangana"
+          ]
         },
         {
           "id": "12d62855-2aa3-4987-9848-c5ef39d50150",
-          "correctAnswers": ["Karnataka"]
+          "correctAnswers": [
+            "Karnataka"
+          ]
         },
         {
           "id": "1bd55795-d38c-4959-9d19-79bc5d00b200",
-          "correctAnswers": ["Telugu", "Urdu"]
+          "correctAnswers": [
+            "Telugu",
+            "Urdu"
+          ]
         },
         {
           "id": "ae31e25c-4a26-4ab8-8af9-e24da535dffa",
-          "correctAnswers": ["8"]
+          "correctAnswers": [
+            "8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8e12ed99-ad6a-4fa5-9b18-45d0f182f84d",
+      "title": "Test Quiz",
+      "desc": "This is a test Quiz",
+      "questions": [
+        {
+          "id": "7b333356-07b9-46aa-ab6e-ce0616c2da9a",
+          "title": "Question 1",
+          "type": "Single Select",
+          "options": [
+            {
+              "id": 1679466844360,
+              "value": "Option 1",
+              "isCorrect": true
+            },
+            {
+              "id": 1679466848478,
+              "value": "Option 2",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswers": [
+            "Option 1"
+          ]
+        }
+      ],
+      "correctAnswers": [
+        {
+          "id": "7b333356-07b9-46aa-ab6e-ce0616c2da9a",
+          "correctAnswers": [
+            "Option 1"
+          ]
         }
       ]
     }
